@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -45,6 +49,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -86,11 +92,23 @@
     <Compile Include="FormLayout.Designer.cs">
       <DependentUpon>FormLayout.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrintProduit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintProduit.Designer.cs">
+      <DependentUpon>frmPrintProduit.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProduit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmProduit.Designer.cs">
       <DependentUpon>frmProduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProvisionnement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProvisionnement.Designer.cs">
+      <DependentUpon>frmProvisionnement.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSearchProduit.cs">
       <SubType>Form</SubType>
@@ -103,6 +121,9 @@
     </Compile>
     <Compile Include="frmUtilisateur.Designer.cs">
       <DependentUpon>frmUtilisateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1\Approvisionnement.cs">
+      <DependentUpon>ModelKirene.tt</DependentUpon>
     </Compile>
     <Compile Include="Model1\Categorie.cs">
       <DependentUpon>ModelKirene.tt</DependentUpon>
@@ -129,6 +150,7 @@
     <Compile Include="Model1\Profil.cs">
       <DependentUpon>ModelKirene.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model1\RapportLisetProduit.cs" />
     <Compile Include="Model1\Utilisateur.cs">
       <DependentUpon>ModelKirene.tt</DependentUpon>
     </Compile>
@@ -137,6 +159,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\rptListeProduit.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptListeProduit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\alerte.cs" />
     <Compile Include="Utils\CheikEnter.cs" />
     <Compile Include="Utils\Crypte.cs" />
     <Compile Include="Utils\LoadComboBox.cs" />
@@ -155,8 +184,14 @@
     <EmbeddedResource Include="FormLayout.resx">
       <DependentUpon>FormLayout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintProduit.resx">
+      <DependentUpon>frmPrintProduit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmProduit.resx">
       <DependentUpon>frmProduit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProvisionnement.resx">
+      <DependentUpon>frmProvisionnement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSearchProduit.resx">
       <DependentUpon>frmSearchProduit.cs</DependentUpon>
@@ -173,6 +208,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report\rptListeProduit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptListeProduit.cs</LastGenOutput>
+    </EmbeddedResource>
     <EntityDeploy Include="Model1\ModelKirene.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelKirene.Designer.cs</LastGenOutput>
@@ -208,6 +247,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -44,7 +44,6 @@
             this.label1.Size = new System.Drawing.Size(80, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Identifiant";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtIdentifiant
             // 
@@ -59,6 +58,7 @@
             this.txtMotDePasse.Name = "txtMotDePasse";
             this.txtMotDePasse.Size = new System.Drawing.Size(327, 24);
             this.txtMotDePasse.TabIndex = 2;
+           
             // 
             // label2
             // 
@@ -105,7 +105,6 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Frm1";
             this.Text = "connexion";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

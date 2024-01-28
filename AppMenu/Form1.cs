@@ -22,11 +22,6 @@ namespace AppMenu
         BdKireneEntities db = new BdKireneEntities();
 
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSeConnecter_Click(object sender, EventArgs e)
         {
             
@@ -62,9 +57,6 @@ namespace AppMenu
             Application.Exit();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

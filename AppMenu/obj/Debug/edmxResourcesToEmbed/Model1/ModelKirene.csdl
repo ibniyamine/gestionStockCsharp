@@ -14,6 +14,7 @@
     <EntitySet Name="VListeProduitCategorie" EntityType="BdKireneModel.VListeProduitCategorie" />
     <EntitySet Name="Profil" EntityType="BdKireneModel.Profil" />
     <EntitySet Name="Utilisateur" EntityType="BdKireneModel.Utilisateur" />
+    <EntitySet Name="Approvisionnement" EntityType="BdKireneModel.Approvisionnement" />
   </EntityContainer>
   <EntityType Name="Produit">
     <Key>
@@ -56,5 +57,16 @@
     <Property Name="IdentifiantUt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="MotDePasse" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="CodeProfil" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Approvisionnement">
+    <Key>
+      <PropertyRef Name="idApp" />
+    </Key>
+    <Property Name="idApp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodeProduit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="QteAppro" Type="Double" />
+    <Property Name="QteRestant" Type="Double" />
+    <Property Name="DatePeremption" Type="DateTime" Precision="0" />
+    <Property Name="DateAppro" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
   </EntityType>
 </Schema>

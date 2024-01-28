@@ -1,5 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="BdKireneModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Approvisionnement">
+    <Key>
+      <PropertyRef Name="idApp" />
+    </Key>
+    <Property Name="idApp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodeProduit" Type="nvarchar" MaxLength="50" />
+    <Property Name="QteAppro" Type="float" />
+    <Property Name="QteRestant" Type="float" />
+    <Property Name="DatePeremption" Type="date" />
+    <Property Name="DateAppro" Type="nchar" MaxLength="10" />
+  </EntityType>
   <EntityType Name="Categorie">
     <Key>
       <PropertyRef Name="idCategorie" />
@@ -53,6 +64,7 @@ avertissement 6002: La table/vue 'BdKirene.dbo.VListeProduitCategorie' n'a pas d
     <Property Name="IdProduit" Type="int" Nullable="false" />
   </EntityType>
   <EntityContainer Name="BdKireneModelStoreContainer">
+    <EntitySet Name="Approvisionnement" EntityType="Self.Approvisionnement" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Categorie" EntityType="Self.Categorie" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Produit" EntityType="Self.Produit" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Profil" EntityType="Self.Profil" Schema="dbo" store:Type="Tables" />

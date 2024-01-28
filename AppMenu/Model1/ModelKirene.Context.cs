@@ -30,5 +30,6 @@ namespace AppMenu.Model1
         public virtual DbSet<VListeProduitCategorie> VListeProduitCategorie { get; set; }
         public virtual DbSet<Profil> Profil { get; set; }
         public virtual DbSet<Utilisateur> Utilisateur { get; set; }
+        public virtual DbSet<Approvisionnement> Approvisionnement { get; set; }
     }
 }

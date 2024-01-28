@@ -93,5 +93,22 @@ namespace AppMenu
             db.SaveChanges();
             reser();
         }
+
+        private void btnAppro_Click(object sender, EventArgs e)
+        {
+            int? id = int.Parse(dgProduit.CurrentRow.Cells[0].Value.ToString());
+            frmProvisionnement f = new frmProvisionnement();
+            f.produit = db.Produit.Find(id);
+            f.ShowDialog();
+
+
+        }
+
+        private void btnImprimer_Click(object sender, EventArgs e)
+        {
+            frmPrintProduit f = new frmPrintProduit();
+            f.Show();
+            this.Enabled = false;
+        }
     }
 }

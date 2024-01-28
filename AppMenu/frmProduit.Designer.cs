@@ -45,6 +45,8 @@
             this.btnAjouter = new System.Windows.Forms.Button();
             this.btnModifier = new System.Windows.Forms.Button();
             this.btnSupprimer = new System.Windows.Forms.Button();
+            this.btnAppro = new System.Windows.Forms.Button();
+            this.btnImprimer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgProduit)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +54,7 @@
             // 
             this.dgProduit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProduit.Location = new System.Drawing.Point(350, 51);
-            this.dgProduit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgProduit.Margin = new System.Windows.Forms.Padding(4);
             this.dgProduit.Name = "dgProduit";
             this.dgProduit.Size = new System.Drawing.Size(811, 535);
             this.dgProduit.TabIndex = 0;
@@ -157,7 +159,7 @@
             // 
             // btnSelect
             // 
-            this.btnSelect.Location = new System.Drawing.Point(181, 35);
+            this.btnSelect.Location = new System.Drawing.Point(182, 51);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(113, 27);
             this.btnSelect.TabIndex = 7;
@@ -195,12 +197,34 @@
             this.btnSupprimer.UseVisualStyleBackColor = true;
             this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
             // 
+            // btnAppro
+            // 
+            this.btnAppro.Location = new System.Drawing.Point(148, 12);
+            this.btnAppro.Name = "btnAppro";
+            this.btnAppro.Size = new System.Drawing.Size(147, 27);
+            this.btnAppro.TabIndex = 12;
+            this.btnAppro.Text = "&Approvisionement";
+            this.btnAppro.UseVisualStyleBackColor = true;
+            this.btnAppro.Click += new System.EventHandler(this.btnAppro_Click);
+            // 
+            // btnImprimer
+            // 
+            this.btnImprimer.Location = new System.Drawing.Point(16, 458);
+            this.btnImprimer.Name = "btnImprimer";
+            this.btnImprimer.Size = new System.Drawing.Size(114, 27);
+            this.btnImprimer.TabIndex = 13;
+            this.btnImprimer.Text = "&Imprimer";
+            this.btnImprimer.UseVisualStyleBackColor = true;
+            this.btnImprimer.Click += new System.EventHandler(this.btnImprimer_Click);
+            // 
             // frmProduit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1174, 621);
             this.ControlBox = false;
+            this.Controls.Add(this.btnImprimer);
+            this.Controls.Add(this.btnAppro);
             this.Controls.Add(this.btnSupprimer);
             this.Controls.Add(this.btnModifier);
             this.Controls.Add(this.btnAjouter);
@@ -219,7 +243,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgProduit);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmProduit";
             this.Text = "frmProduit";
             this.Load += new System.EventHandler(this.frmProduit_Load);
@@ -248,5 +272,7 @@
         private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.Button btnModifier;
         private System.Windows.Forms.Button btnSupprimer;
+        private System.Windows.Forms.Button btnAppro;
+        private System.Windows.Forms.Button btnImprimer;
     }
 }

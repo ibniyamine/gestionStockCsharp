@@ -56,5 +56,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Approvisionnement">
+      <EntityTypeMapping TypeName="BdKireneModel.Approvisionnement">
+        <MappingFragment StoreEntitySet="Approvisionnement">
+          <ScalarProperty Name="DateAppro" ColumnName="DateAppro" />
+          <ScalarProperty Name="DatePeremption" ColumnName="DatePeremption" />
+          <ScalarProperty Name="QteRestant" ColumnName="QteRestant" />
+          <ScalarProperty Name="QteAppro" ColumnName="QteAppro" />
+          <ScalarProperty Name="CodeProduit" ColumnName="CodeProduit" />
+          <ScalarProperty Name="idApp" ColumnName="idApp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
